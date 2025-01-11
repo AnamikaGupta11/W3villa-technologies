@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+# Installation Manual for Frontend Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Prerequisites
+Ensure you have the following software installed:
 
-## Available Scripts
+1. **Node.js**: Download and install from [Node.js official website](https://nodejs.org/).
+2. **npm or yarn**: Comes bundled with Node.js. Verify installation by running:
+   ```bash
+   node -v
+   npm -v
+   ```
 
-In the project directory, you can run:
+## Downloading the Project
 
-### `npm start`
+### 1. Clone the Repository
+Clone the project repository to your local machine:
+```bash
+git clone <repository-url>
+```
+Navigate into the project directory:
+```bash
+cd frontend
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Alternatively, you can download the project as a ZIP file:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Click on the "Code" button on the repository's page.
+2. Select "Download ZIP."
+3. Extract the ZIP file to your desired location.
 
-### `npm test`
+### 2. Install Dependencies
+Install the required dependencies using npm or yarn:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Using npm:
+```bash
+npm install
+```
 
-### `npm run build`
+#### Using yarn:
+```bash
+yarn install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. Start the Development Server
+To start the development server, run:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Using npm:
+```bash
+npm run dev
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Using yarn:
+```bash
+yarn dev
+```
 
-### `npm run eject`
+This will start the application, and you can access it at:
+```
+http://localhost:3000
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4. Build for Production
+To create a production build of the application, run:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Using npm:
+```bash
+npm run build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Using yarn:
+```bash
+yarn build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The optimized build files will be generated in the `build/` directory.
 
-## Learn More
+### 5. Run Tests
+To execute tests, use:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Using npm:
+```bash
+npm test
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Using yarn:
+```bash
+yarn test
+```
 
-### Code Splitting
+## Configuration
+### Browserslist
+This project uses Browserslist to specify target browsers. The configurations are located in the `package.json` file under the `browserslist` key.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Production:**
+  ```
+  >0.2%
+  not dead
+  not op_mini all
+  ```
+- **Development:**
+  ```
+  last 1 chrome version
+  last 1 firefox version
+  last 1 safari version
+  ```
 
-### Analyzing the Bundle Size
+## Tailwind CSS Integration
+The project uses Tailwind CSS for styling. To customize Tailwind, modify the configuration file (`tailwind.config.js`). For more details, refer to the [Tailwind CSS documentation](https://tailwindcss.com/docs/configuration).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Troubleshooting
 
-### Making a Progressive Web App
+- **Dependency Errors:** Run `npm install` or `yarn install` again to ensure all dependencies are installed.
+- **Port Already in Use:** If the default port (3000) is occupied, specify an alternate port by setting the `PORT` environment variable:
+  ```bash
+  PORT=4000 npm run dev
+  ```
+- **Build Issues:** Ensure all dependencies are up-to-date by running:
+  ```bash
+  npm update
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+For additional help, consult the project documentation or contact the maintainers.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
